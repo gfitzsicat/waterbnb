@@ -10,9 +10,6 @@ import tayla from "../assets/tayla.png"
 
 const About = ({ onAbout }) => {
 
-
-
-
   return (
     <div className='about'>
       <h1 className='waterbnb'>WaterBnb - About Us</h1>

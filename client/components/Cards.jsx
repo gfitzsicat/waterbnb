@@ -19,7 +19,7 @@ const Cards = ({ data, renderBoatPage, renderAboutPage }) => {
 
       // Remove the card from my_rentals table
       try {
-        await axios.delete(`/api/my-rentals/${id}`);
+        await axios.delete(`/api/my-rental/${id}`);
         console.log(`Removed rental with ID ${id} from my_rentals`);
       } catch (error) {
         console.error(
@@ -34,7 +34,7 @@ const Cards = ({ data, renderBoatPage, renderAboutPage }) => {
       // Add the card to my_rentals table
       const selectedCard = data.find((rental) => rental.id === id);
       try {
-        await axios.post('/api/my-rentals', selectedCard);
+        await axios.post('/api/my-rental', selectedCard);
         console.log('Added to my_rentals:', selectedCard);
       } catch (error) {
         console.error('Error adding to my_rentals:', error);

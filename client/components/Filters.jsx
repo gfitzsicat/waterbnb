@@ -9,12 +9,12 @@ import Cards from './Cards';
 
 const Filters = ( { onFilter }) => {
   const sorting = [
-    { type: 'trending', title: 'Trending', icon: <HiOutlineFire /> },
-    { type: 'sail-boat', title: 'Sail Boats', icon: <TbSailboat /> },
-    { type: 'power-boat', title: 'Power Boats', icon: <TbSpeedboat /> },
-    { type: 'yacht', title: 'Yachts', icon: <MdOutlineDirectionsBoatFilled /> },
-    { type: 'fishing-boat', title: 'Fishing Boats', icon: <TbFishHook /> },
-    { type: 'house-boat', title: 'House Boats', icon: <RiHomeSmileLine /> },
+    { type: 'Trending', title: 'Trending', icon: <HiOutlineFire /> },
+    { type: 'Sail Boats', title: 'Sail Boats', icon: <TbSailboat /> },
+    { type: 'Power Boats', title: 'Power Boats', icon: <TbSpeedboat /> },
+    { type: 'Yachts', title: 'Yachts', icon: <MdOutlineDirectionsBoatFilled /> },
+    { type: 'Fishing Boats', title: 'Fishing Boats', icon: <TbFishHook /> },
+    { type: 'House Boats', title: 'House Boats', icon: <RiHomeSmileLine /> },
   ];
 
   const [rentals, setRentals] = useState([]);
@@ -25,8 +25,8 @@ const Filters = ( { onFilter }) => {
       setRentals([]);
       onFilter();
       // Make an HTTP GET request to the backend API
-      const response = await axios.get(`/api/${type}`);
-  
+      const response = await axios.get(`/api/rentalType/${type}`);
+      console.log(type)
       // Update the state with the received rentals
       setRentals(response.data);
 

@@ -24,7 +24,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/api/rentals");
+        const response = await axios.get("/api/rental");
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);

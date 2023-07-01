@@ -7,7 +7,7 @@ function MyRental({onHandleButtonClick}) {
   useEffect(() => {
     const handleGetAllMyRentals = async () => {
       try {
-        const result = await axios.get('/api/my-rentals');
+        const result = await axios.get('/api/my-rental');
         console.log(result.data);
         setRentals(result.data.likedIds);
       } catch (error) {

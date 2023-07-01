@@ -56,7 +56,7 @@ const DropDownLogin = ({
           <Themes theme={theme} toggleTheme={toggleTheme} />
         </div>
       </ul>
-      <button onClick={onAbout}>Show About</button>
+      <button className="text-lg text-center mr-auto ml-2 mt-1" onClick={onAbout}>Show About</button>
       {selectedComponent}
     </div>
   );

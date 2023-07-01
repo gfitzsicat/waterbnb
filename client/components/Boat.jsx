@@ -10,7 +10,7 @@ const Boat = ({ rentalId }) => {
   useEffect(() => {
     const fetchRentalData = async () => {
       try {
-        const response = await axios.get(`/api/rentals/${rentalId}`);
+        const response = await axios.get(`/api/rental/${rentalId}`);
         setRentalData(response.data);
       } catch (error) {
         console.error("Error fetching rental data:", error);
